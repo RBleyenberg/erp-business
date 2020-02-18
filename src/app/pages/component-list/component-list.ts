@@ -5,7 +5,7 @@ import {SvgViewerModule} from '../../shared/svg-viewer/svg-viewer';
 import {CommonModule} from '@angular/common';
 import {MatCardModule } from '@angular/material/card';
 import {combineLatest} from 'rxjs';
-import { DocCategory, DocumentationItems } from 'menu/menu-items';
+import { DocCategory, DocumentationItems } from 'src/menu/menu-items';
 
 @Component({
   selector: 'app-crm',

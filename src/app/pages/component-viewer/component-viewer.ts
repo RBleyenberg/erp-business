@@ -9,7 +9,7 @@ import { DocViewerModule } from '../../shared/doc-viewer/doc-viewer-module';
 import { TableOfContents } from '../../shared/table-of-contents/table-of-contents';
 import { TableOfContentsModule } from '../../shared/table-of-contents/table-of-contents.module';
 import { ComponentPageTitle } from '../page-title/page-title';
-import { DocItem, DocumentationItems } from 'menu/menu-items';
+import { DocItem, DocumentationItems } from 'src/menu/menu-items';
 
 @Component({
   selector: 'app-component-viewer',
@@ -19,7 +19,7 @@ import { DocItem, DocumentationItems } from 'menu/menu-items';
 })
 export class ComponentViewer implements OnDestroy {
   componentDocItem = new ReplaySubject<DocItem>(1);
-  sections: Set<string> = new Set(['overview', 'api']);
+  sections: Set<string> = new Set(['overview', 'documentation']);
   private _destroyed = new Subject();
 
   constructor(_route: ActivatedRoute,
@@ -110,9 +110,9 @@ export class ComponentOverview extends ComponentBaseView {
 }
 
 @Component({
-  selector: 'component-api',
-  templateUrl: './component-api.html',
-  styleUrls: ['./component-api.scss'],
+  selector: 'component-documentation',
+  templateUrl: './component-documentation.html',
+  styleUrls: ['./component-documentation.scss'],
   encapsulation: ViewEncapsulation.None,
 })
 export class ComponentApi extends ComponentBaseView {
@@ -122,7 +122,7 @@ export class ComponentApi extends ComponentBaseView {
 
   getApiDocumentUrl(doc: DocItem) {
     const apiDocId = doc.apiDocId || `${doc.packageName}-${doc.id}`;
-    return `/docs-content/api-docs/${apiDocId}.html`;
+    return `/docs-content/documentation/${apiDocId}.html`;
   }
 }
 

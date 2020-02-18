@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {CanActivate, ActivatedRouteSnapshot, Router, RouterStateSnapshot} from '@angular/router';
-import { SECTIONS } from 'menu/menu-items';
+import { SECTIONS } from 'src/menu/menu-items';
 
 /**
  * Guard to determine if the sidenav can load, based on whether the section exists in documentation

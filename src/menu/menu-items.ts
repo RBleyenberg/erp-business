@@ -1,16 +1,10 @@
 import {Injectable} from '@angular/core';
 
-export interface AdditionalApiDoc {
-  name: string;
-  path: string;
-}
-
 export interface DocItem {
   id: string;
   name: string;
   summary?: string;
   packageName?: string;
-  examples?: string[];
   apiDocId?: string;
 }
 
@@ -61,7 +55,7 @@ const DOCS: {[key: string]: DocCategory[]} = {
 
 for (const category of DOCS[CRM]) {
   for (const doc of category.items) {
-    doc.packageName = 'material';
+    doc.packageName = 'crm';
   }
 }
 
@@ -95,7 +89,8 @@ export class DocumentationItems {
   }
 
   getItemById(id: string, section: string): DocItem | undefined {
-    const sectionLookup = section === 'cdk' ? 'cdk' : 'material';
+    const sectionLookup = section === 'cdk' ? 'cdk' : 'crm';
+    console.log("sectionLookup " + sectionLookup)
     return ALL_DOCS.find(doc => doc.id === id && doc.packageName === sectionLookup);
   }
 

@@ -29,7 +29,7 @@
               },
               {
                 "glob": "**/*",
-                "input": "./content",
+                "input": "./src/content",
                 "output": "/docs-content"
               },
               {

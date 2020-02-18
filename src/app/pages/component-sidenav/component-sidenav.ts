@@ -19,7 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SvgViewerModule } from '../../shared/svg-viewer/svg-viewer';
 import { MatDrawerToggleResult } from '@angular/material/sidenav/drawer';
 import { MatListModule } from '@angular/material/list';
-import { DocumentationItems } from 'menu/menu-items';
+import { DocumentationItems } from 'src/menu/menu-items';
 
 // These constants are used by the ComponentSidenav for orchestrating the MatSidenav in a responsive
 // way. This includes hiding the sidenav, defaulting it to open, changing the mode from over to
@@ -164,7 +164,7 @@ const routes: Routes = [{
       children: [
         { path: '', redirectTo: 'overview', pathMatch: 'full' },
         { path: 'overview', component: ComponentOverview, pathMatch: 'full' },
-        { path: 'api', component: ComponentApi, pathMatch: 'full' },
+        { path: 'documentation', component: ComponentApi, pathMatch: 'full' },
         { path: '**', redirectTo: 'overview' },
       ],
     },

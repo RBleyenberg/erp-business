@@ -1,10 +1,8 @@
-import {
-  AfterViewInit, Component, ElementRef, Inject, Input, OnDestroy, OnInit
-} from '@angular/core';
-import {DOCUMENT} from '@angular/common';
-import {ActivatedRoute, NavigationEnd, Router} from '@angular/router';
-import {Subject, fromEvent} from 'rxjs';
-import {debounceTime, takeUntil} from 'rxjs/operators';
+import { AfterViewInit, Component, ElementRef, Inject, Input, OnDestroy, OnInit } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { Subject, fromEvent } from 'rxjs';
+import { debounceTime, takeUntil } from 'rxjs/operators';
 
 interface LinkSection {
   name: string;
@@ -45,9 +43,9 @@ export class TableOfContents implements OnInit, AfterViewInit, OnDestroy {
   private _urlFragment = '';
 
   constructor(private _router: Router,
-              private _route: ActivatedRoute,
-              private _element: ElementRef,
-              @Inject(DOCUMENT) private _document: Document) {
+    private _route: ActivatedRoute,
+    private _element: ElementRef,
+    @Inject(DOCUMENT) private _document: Document) {
 
     this._router.events.pipe(takeUntil(this._destroyed)).subscribe((event) => {
       if (event instanceof NavigationEnd) {
@@ -77,9 +75,9 @@ export class TableOfContents implements OnInit, AfterViewInit, OnDestroy {
 
       if (this._scrollContainer) {
         fromEvent(this._scrollContainer, 'scroll').pipe(
-            takeUntil(this._destroyed),
-            debounceTime(10))
-            .subscribe(() => this.onScroll());
+          takeUntil(this._destroyed),
+          debounceTime(10))
+          .subscribe(() => this.onScroll());
       }
     });
   }
@@ -110,7 +108,7 @@ export class TableOfContents implements OnInit, AfterViewInit, OnDestroy {
     headers.forEach((header) => {
       // remove the 'link' icon name from the inner text
       const name = header.innerText.trim().replace(/^link/, '');
-      const {top} = header.getBoundingClientRect();
+      const { top } = header.getBoundingClientRect();
       links.push({
         name,
         type: header.tagName.toLowerCase(),
@@ -119,13 +117,13 @@ export class TableOfContents implements OnInit, AfterViewInit, OnDestroy {
         active: false
       });
     });
-    this._linkSections.push({name: sectionName, links});
+    this._linkSections.push({ name: sectionName, links });
     this._links.push(...links);
   }
 
   /** Gets the scroll offset of the scroll container */
   private getScrollOffset(): number | void {
-    const {top} = this._element.nativeElement.getBoundingClientRect();
+    const { top } = this._element.nativeElement.getBoundingClientRect();
     if (typeof this._scrollContainer.scrollTop !== 'undefined') {
       return this._scrollContainer.scrollTop + top;
     } else if (typeof this._scrollContainer.pageYOffset !== 'undefined') {
