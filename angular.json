@@ -18,50 +18,48 @@
             "aot": true,
             "sourceMap": true,
             "outputPath": "dist",
-            "index": "frontend/src/index.html",
-            "main": "frontend/src/main.ts",
+            "index": "frontend/index.html",
+            "main": "frontend/main.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
               {
                 "glob": "**/*",
-                "input": "frontend/src/assets",
+                "input": "frontend/assets",
                 "output": "/assets"
               },
               {
                 "glob": "**/*",
-                "input": "./frontend/src/content",
+                "input": "./frontend/content",
                 "output": "/docs-content"
               },
               {
-                "glob": "frontend/src/favicon.ico",
+                "glob": "frontend/favicon.ico",
                 "input": "src",
                 "output": "/"
-              },
-              "frontend/src/robots.txt",
-              "frontend/src/sitemap.xml"
+              }
             ],
             "styles": [
               {
-                "input": "frontend/src/styles.scss"
+                "input": "frontend/styles.scss"
               },
               {
                 "inject": false,
-                "input": "frontend/src/assets/pink-bluegrey.css",
+                "input": "frontend/assets/pink-bluegrey.css",
                 "bundleName": "pink-bluegrey"
               },
               {
                 "inject": false,
-                "input": "frontend/src/assets/deeppurple-amber.css",
+                "input": "frontend/assets/deeppurple-amber.css",
                 "bundleName": "deeppurple-amber"
               },
               {
                 "inject": false,
-                "input": "frontend/src/assets/indigo-pink.css",
+                "input": "frontend/assets/indigo-pink.css",
                 "bundleName": "indigo-pink"
               },
               {
                 "inject": false,
-                "input": "frontend/src/assets/purple-green.css",
+                "input": "frontend/assets/purple-green.css",
                 "bundleName": "purple-green"
               }
             ],
@@ -87,8 +85,8 @@
               "buildOptimizer": true,
               "fileReplacements": [
                 {
-                  "src": "frontend/src/environments/environment.ts",
-                  "replaceWith": "frontend/src/environments/environment.prod.ts"
+                  "src": "frontend/environments/environment.ts",
+                  "replaceWith": "frontend/environments/environment.prod.ts"
                 }
               ]
             }
@@ -114,40 +112,40 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "frontend/src/test.ts",
-            "polyfills": "frontend/src/polyfills.ts",
+            "main": "frontend/test.ts",
+            "polyfills": "frontend/polyfills.ts",
             "karmaConfig": "karma.conf.js",
             "tsConfig": "tsconfig.spec.json",
             "scripts": [],
             "styles": [
               {
-                "input": "frontend/src/styles.scss"
+                "input": "frontend/styles.scss"
               },
               {
                 "inject": false,
-                "input": "frontend/src/assets/pink-bluegrey.css",
+                "input": "frontend/assets/pink-bluegrey.css",
                 "bundleName": "pink-bluegrey"
               },
               {
                 "inject": false,
-                "input": "frontend/src/assets/deeppurple-amber.css",
+                "input": "frontend/assets/deeppurple-amber.css",
                 "bundleName": "deeppurple-amber"
               },
               {
                 "inject": false,
-                "input": "frontend/src/assets/indigo-pink.css",
+                "input": "frontend/assets/indigo-pink.css",
                 "bundleName": "indigo-pink"
               },
               {
                 "inject": false,
-                "input": "frontend/src/assets/purple-green.css",
+                "input": "frontend/assets/purple-green.css",
                 "bundleName": "purple-green"
               }
             ],
             "assets": [
               {
                 "glob": "**/*",
-                "input": "frontend/src/assets",
+                "input": "frontend/assets",
                 "output": "/assets"
               },
               {
@@ -187,6 +185,6 @@
     }
   },
   "cli": {
-    "analytics": "cf155f04-1636-4df9-9ce2-870ba25ad38d"
+    "analytics": "#"
   }
 }

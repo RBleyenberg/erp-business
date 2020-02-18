@@ -27,7 +27,7 @@
     "strictFunctionTypes": true
   },
   "exclude": [
-    "src/assets",
+    "frontend/assets",
     "dist"
   ],
   "angularCompilerOptions": {

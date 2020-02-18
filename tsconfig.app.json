@@ -5,10 +5,10 @@
     "types": []
   },
   "files": [
-    "frontend/src/main.ts",
-    "frontend/src/polyfills.ts"
+    "frontend/main.ts",
+    "frontend/polyfills.ts"
   ],
   "include": [
-    "frontend/src/**/*.d.ts"
+    "frontend/**/*.d.ts"
   ]
 }

@@ -19,13 +19,13 @@
           "options": {
             "aot": true,
             "outputPath": "dist",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
+            "index": "frontend/index.html",
+            "main": "frontend/main.ts",
+            "polyfills": "frontend/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [],
             "styles": [
-              "src/styles.scss"
+              "frontend/styles.scss"
             ],
             "scripts": []
           },
