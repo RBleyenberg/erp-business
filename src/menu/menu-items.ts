@@ -5,14 +5,13 @@ export interface DocItem {
   name: string;
   summary?: string;
   packageName?: string;
-  apiDocId?: string;
+  DocId?: string;
 }
 
 export interface DocCategory {
   id: string;
   name: string;
   items: DocItem[];
-  summary?: string;
 }
 
 export interface DocSection {
@@ -34,7 +33,7 @@ export const SECTIONS: {[key: string]: DocSection} = {
 const DOCS: {[key: string]: DocCategory[]} = {
   [CRM]: [
     {
-      id: 'main',  // wordt ook de url opbouw
+      id: 'main', 
       name: 'Main',
       items: [
         {
@@ -48,7 +47,7 @@ const DOCS: {[key: string]: DocCategory[]} = {
       ]
     },
     {
-      id: 'applications',  // wordt ook de url opbouw
+      id: 'applications', 
       name: 'Applications',
       items: [
         {
@@ -65,10 +64,6 @@ const DOCS: {[key: string]: DocCategory[]} = {
       id: 'general',
       name: 'General',
       items: [
-        {
-          id: 'autocomplete',
-          name: 'CRM'
-        },
         {
           id: 'autocomplete',
           name: 'Adressen'

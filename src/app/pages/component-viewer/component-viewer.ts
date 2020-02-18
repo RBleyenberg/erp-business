@@ -121,8 +121,8 @@ export class ComponentApi extends ComponentBaseView {
   }
 
   getApiDocumentUrl(doc: DocItem) {
-    const apiDocId = doc.apiDocId || `${doc.packageName}-${doc.id}`;
-    return `/docs-content/documentation/${apiDocId}.html`;
+    const DocId = doc.DocId || `${doc.packageName}-${doc.id}`;
+    return `/docs-content/documentation/${DocId}.html`;
   }
 }
 
