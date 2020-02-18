@@ -29,7 +29,7 @@
               },
               {
                 "glob": "**/*",
-                "input": "./node_modules/@angular/components-examples/docs-content",
+                "input": "./content",
                 "output": "/docs-content"
               },
               {
@@ -43,9 +43,6 @@
             "styles": [
               {
                 "input": "src/styles.scss"
-              },
-              {
-                "input": "src/highlightjs/material-light.scss"
               },
               {
                 "inject": false,
@@ -125,9 +122,6 @@
             "styles": [
               {
                 "input": "src/styles.scss"
-              },
-              {
-                "input": "src/highlightjs/material-light.scss"
               },
               {
                 "inject": false,

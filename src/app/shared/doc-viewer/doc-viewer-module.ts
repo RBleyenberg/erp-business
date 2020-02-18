@@ -7,7 +7,6 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {PortalModule} from '@angular/cdk/portal';
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
-import {HeaderLink} from './header-link';
 
 
 // ExampleViewer is included in the DocViewerModule because they have a circular dependency.
@@ -22,8 +21,8 @@ import {HeaderLink} from './header-link';
     PortalModule
   ],
   providers: [],
-  declarations: [DocViewer, HeaderLink],
-  entryComponents: [HeaderLink],
-  exports: [DocViewer, HeaderLink],
+  declarations: [DocViewer],
+  entryComponents: [],
+  exports: [DocViewer],
 })
 export class DocViewerModule { }
