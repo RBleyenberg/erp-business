@@ -24,7 +24,7 @@ app-component-viewer {
   position: relative;
   min-height: 500px;
 
-  // Display outlet crm with toc as flex and switch to
+  // Display outlet with toc as flex and switch to
   // vertical direction on small screens
   component-overview, component-documentation {
     display: flex;
