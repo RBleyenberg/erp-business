@@ -3,8 +3,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgModule} from '@angular/core';
 import {LocationStrategy, PathLocationStrategy} from '@angular/common';
 import {RouterModule} from '@angular/router';
-
-import {MaterialDocsApp} from './dare-docs-app';
+import {MaterialDocsApp} from './dare-erp-app';
 import {MATERIAL_DOCS_ROUTES} from './routes';
 import {NavBarModule} from './shared/navbar';
 

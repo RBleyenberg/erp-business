@@ -1,4 +1,4 @@
-dare-docs-app {
+dare-erp-app {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -16,24 +16,24 @@ app-navbar {
   z-index: 2;
 }
 
-dare-docs-app > app-component-sidenav {
+dare-erp-app > app-component-sidenav {
   flex: 1;
 }
 
-dare-docs-app > app-homepage,
-dare-docs-app > app-guides,
-dare-docs-app > guide-viewer {
+dare-erp-app > app-homepage,
+dare-erp-app > app-guides,
+dare-erp-app > guide-viewer {
   overflow-y: auto;
 }
 
 @media (max-width: 720px) {
-  dare-docs-app {
+  dare-erp-app {
     top: 92px;
   }
 
-  dare-docs-app > app-homepage,
-  dare-docs-app > app-guides,
-  dare-docs-app > guide-viewer {
+  dare-erp-app > app-homepage,
+  dare-erp-app > app-guides,
+  dare-erp-app > guide-viewer {
     overflow-y: visible;
   }
 }

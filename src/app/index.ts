@@ -1,2 +1,2 @@
-export * from './dare-docs-app';
+export * from './dare-erp-app';
 export * from './app-module';
