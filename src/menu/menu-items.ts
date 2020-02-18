@@ -19,14 +19,14 @@ export interface DocSection {
   name: string;
 }
 
-const PRODUCTS = 'products';
-const CRM = 'crm';
+const ITEMS = 'items';
+const CRM = 'crm';  // wordt ook de url opbouw
 export const SECTIONS: {[key: string]: DocSection} = {
   [CRM]: {
-    name: 'CRM'
+    name: 'crm'
   },
-  [PRODUCTS]: {
-    name: 'PRODUCTS'
+  [ITEMS]: {
+    name: 'articles'
   },
 };
 
@@ -34,19 +34,49 @@ export const SECTIONS: {[key: string]: DocSection} = {
 const DOCS: {[key: string]: DocCategory[]} = {
   [CRM]: [
     {
-      id: 'forms',
-      name: 'Form Controls',
-      summary: 'Controls that collect and validate user input.',
+      id: 'main',  // wordt ook de url opbouw
+      name: 'Main',
       items: [
         {
           id: 'autocomplete',
-          name: 'Autocomplete',
-          summary: 'Suggests relevant options as the user types.'
+          name: 'Relaties'
+        },
+        {
+          id: 'autocomplete',
+          name: 'Contactpersonen'
+        }
+      ]
+    },
+    {
+      id: 'applications',  // wordt ook de url opbouw
+      name: 'Applications',
+      items: [
+        {
+          id: 'autocomplete',
+          name: 'Todos'
+        },
+        {
+          id: 'autocomplete',
+          name: 'Agenda'
+        }
+      ]
+    },
+    {
+      id: 'general',
+      name: 'General',
+      items: [
+        {
+          id: 'autocomplete',
+          name: 'CRM'
+        },
+        {
+          id: 'autocomplete',
+          name: 'Adressen'
         }
       ]
     }
   ],
-  [PRODUCTS] : []
+  [ITEMS] : []
 };
 
 for (const category of DOCS[CRM]) {
@@ -55,18 +85,18 @@ for (const category of DOCS[CRM]) {
   }
 }
 
-for (const category of DOCS[PRODUCTS]) {
+for (const category of DOCS[ITEMS]) {
   for (const doc of category.items) {
-    doc.packageName = 'products';
+    doc.packageName = 'items';
   }
 }
 
 const ALL_CRM = DOCS[CRM].reduce(
   (result: DocItem[], category: DocCategory) => result.concat(category.items), []);
-const ALL_PRODUCTS = DOCS[PRODUCTS].reduce(
-  (result: DocItem[], products: DocCategory) => result.concat(products.items), []);
-const ALL_DOCS = ALL_CRM.concat(ALL_PRODUCTS);
-const ALL_CATEGORIES = DOCS[CRM].concat(DOCS[PRODUCTS]);
+const ALL_ITEMS = DOCS[ITEMS].reduce(
+  (result: DocItem[], items: DocCategory) => result.concat(items.items), []);
+const ALL_DOCS = ALL_CRM.concat(ALL_ITEMS);
+const ALL_CATEGORIES = DOCS[CRM].concat(DOCS[ITEMS]);
 
 @Injectable()
 export class DocumentationItems {
@@ -78,14 +108,14 @@ export class DocumentationItems {
     if (section === CRM) {
       return ALL_CRM;
     }
-    if (section === PRODUCTS) {
-      return ALL_PRODUCTS;
+    if (section === ITEMS) {
+      return ALL_ITEMS;
     }
     return [];
   }
 
   getItemById(id: string, section: string): DocItem | undefined {
-    const sectionLookup = section === 'products' ? 'products' : 'crm';
+    const sectionLookup = section === 'items' ? 'items' : 'crm';
     console.log("sectionLookup " + sectionLookup)
     return ALL_DOCS.find(doc => doc.id === id && doc.packageName === sectionLookup);
   }
