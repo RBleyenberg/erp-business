@@ -3,9 +3,9 @@ import {Event, NavigationEnd, Router} from '@angular/router';
 import {filter} from 'rxjs/operators';
 
 @Component({
-  selector: 'material-docs-app',
-  templateUrl: './material-docs-app.html',
-  styleUrls: ['./material-docs-app.scss'],
+  selector: 'dare-docs-app',
+  templateUrl: './dare-docs-app.html',
+  styleUrls: ['./dare-docs-app.scss'],
   encapsulation: ViewEncapsulation.None,
 })
 export class MaterialDocsApp {

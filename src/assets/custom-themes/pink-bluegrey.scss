@@ -6,4 +6,4 @@ $accent:  mat-palette($mat-blue-grey);
 
 $theme: mat-dark-theme($primary, $accent);
 @include angular-material-theme($theme);
-@include material-docs-app-theme($theme);
+@include dare-docs-app-theme($theme);
