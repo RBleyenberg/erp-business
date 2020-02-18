@@ -7,7 +7,7 @@ import {ThemePickerModule} from '../theme-picker';
 import {ThemeStorage} from '../theme-picker/theme-storage/theme-storage';
 import {StyleManager} from '../style-manager';
 import {HttpClientModule} from '@angular/common/http';
-import { SECTIONS } from 'src/menu/menu-items';
+import { SECTIONS } from '../../../menu/menu-items';
 
 const SECTIONS_KEYS = Object.keys(SECTIONS);
 

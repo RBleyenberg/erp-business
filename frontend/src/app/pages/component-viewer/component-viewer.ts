@@ -9,7 +9,7 @@ import { DocViewerModule } from '../../shared/doc-viewer/doc-viewer-module';
 import { TableOfContents } from '../../shared/table-of-contents/table-of-contents';
 import { TableOfContentsModule } from '../../shared/table-of-contents/table-of-contents.module';
 import { ComponentPageTitle } from '../page-title/page-title';
-import { DocItem, DocumentationItems } from 'src/menu/menu-items';
+import { DocItem, DocumentationItems } from '../../../menu/menu-items';
 
 @Component({
   selector: 'app-component-viewer',
