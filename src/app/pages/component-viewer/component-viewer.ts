@@ -1,24 +1,15 @@
-import {BreakpointObserver} from '@angular/cdk/layout';
-import {CommonModule} from '@angular/common';
-import {
-  Component,
-  Directive,
-  ElementRef,
-  NgModule,
-  OnDestroy,
-  OnInit,
-  ViewChild,
-  ViewEncapsulation,
-} from '@angular/core';
-import {MatTabsModule} from '@angular/material/tabs';
-import {ActivatedRoute, Params, Router, RouterModule} from '@angular/router';
-import {combineLatest, Observable, ReplaySubject, Subject} from 'rxjs';
-import {map, takeUntil} from 'rxjs/operators';
-import {DocViewerModule} from '../../shared/doc-viewer/doc-viewer-module';
-import {DocItem, DocumentationItems} from '../../shared/documentation-items/documentation-items';
-import {TableOfContents} from '../../shared/table-of-contents/table-of-contents';
-import {TableOfContentsModule} from '../../shared/table-of-contents/table-of-contents.module';
-import {ComponentPageTitle} from '../page-title/page-title';
+import { BreakpointObserver } from '@angular/cdk/layout';
+import { CommonModule } from '@angular/common';
+import { Component, Directive, ElementRef, NgModule, OnDestroy, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
+import { MatTabsModule } from '@angular/material/tabs';
+import { ActivatedRoute, Params, Router, RouterModule } from '@angular/router';
+import { combineLatest, Observable, ReplaySubject, Subject } from 'rxjs';
+import { map, takeUntil } from 'rxjs/operators';
+import { DocViewerModule } from '../../shared/doc-viewer/doc-viewer-module';
+import { DocItem, DocumentationItems } from '../../shared/documentation-items/documentation-items';
+import { TableOfContents } from '../../shared/table-of-contents/table-of-contents';
+import { TableOfContentsModule } from '../../shared/table-of-contents/table-of-contents.module';
+import { ComponentPageTitle } from '../page-title/page-title';
 
 @Component({
   selector: 'app-component-viewer',
@@ -32,10 +23,10 @@ export class ComponentViewer implements OnDestroy {
   private _destroyed = new Subject();
 
   constructor(_route: ActivatedRoute,
-              private router: Router,
-              public _componentPageTitle: ComponentPageTitle,
-              public docItems: DocumentationItems,
-              ) {
+    private router: Router,
+    public _componentPageTitle: ComponentPageTitle,
+    public docItems: DocumentationItems,
+  ) {
     const routeAndParentParams = [_route.params];
     if (_route.parent) {
       routeAndParentParams.push(_route.parent.params);
@@ -43,11 +34,13 @@ export class ComponentViewer implements OnDestroy {
     // Listen to changes on the current route for the doc id (e.g. button/checkbox) and the
     // parent route for the section (material/cdk).
     combineLatest(routeAndParentParams).pipe(
-      map((params: Params[]) => ({id: params[0]['id'], section: params[1]['section']})),
-      map((docIdAndSection: {id: string, section: string}) =>
-          ({doc: docItems.getItemById(docIdAndSection.id, docIdAndSection.section),
-            section: docIdAndSection.section}), takeUntil(this._destroyed))
-    ).subscribe((docItemAndSection: {doc: DocItem | undefined, section: string}) => {
+      map((params: Params[]) => ({ id: params[0]['id'], section: params[1]['section'] })),
+      map((docIdAndSection: { id: string, section: string }) =>
+        ({
+          doc: docItems.getItemById(docIdAndSection.id, docIdAndSection.section),
+          section: docIdAndSection.section
+        }), takeUntil(this._destroyed))
+    ).subscribe((docItemAndSection: { doc: DocItem | undefined, section: string }) => {
       if (docItemAndSection.doc !== undefined) {
         this.componentDocItem.next(docItemAndSection.doc);
         this._componentPageTitle.title = `${docItemAndSection.doc.name}`;
@@ -86,7 +79,7 @@ export class ComponentBaseView implements OnInit, OnDestroy {
   ngOnInit() {
     this.componentViewer.componentDocItem.pipe(takeUntil(this.destroyed)).subscribe(() => {
       // 100ms timeout is used to allow the page to settle before moving focus for screen readers.
-      setTimeout(() => this.focusTarget.nativeElement.focus({preventScroll: true}), 100);
+      setTimeout(() => this.focusTarget.nativeElement.focus({ preventScroll: true }), 100);
       if (this.tableOfContents) {
         this.tableOfContents.resetHeaders();
       }
@@ -146,4 +139,4 @@ export class ComponentApi extends ComponentBaseView {
   declarations: [ComponentViewer, ComponentOverview, ComponentApi],
   providers: [DocumentationItems],
 })
-export class ComponentViewerModule {}
+export class ComponentViewerModule { }

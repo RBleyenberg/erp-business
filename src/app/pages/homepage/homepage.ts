@@ -11,7 +11,6 @@ import {ComponentPageTitle} from '../page-title/page-title';
   styleUrls: ['./homepage.scss']
 })
 export class Homepage implements OnInit {
-  isNextVersion = location.hostname.startsWith('next.material.angular.io');
 
   constructor(public _componentPageTitle: ComponentPageTitle) {}
 

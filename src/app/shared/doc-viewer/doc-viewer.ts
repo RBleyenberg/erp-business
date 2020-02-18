@@ -1,7 +1,7 @@
 import { DomPortalOutlet } from '@angular/cdk/portal';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { DomSanitizer } from '@angular/platform-browser';
-import { ApplicationRef, Component, ElementRef, EventEmitter, Input, NgZone, OnDestroy, Output, SecurityContext } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, NgZone, OnDestroy, Output, SecurityContext } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { take } from 'rxjs/operators';
 
@@ -10,7 +10,7 @@ import { take } from 'rxjs/operators';
   template: 'Loading document...',
 })
 export class DocViewer implements OnDestroy {
-  private _portalHosts: DomPortalOutlet[] = [];
+
   private _documentFetchSubscription: Subscription;
 
   @Input() name: string;
@@ -28,7 +28,7 @@ export class DocViewer implements OnDestroy {
   /** The document text. It should not be HTML encoded. */
   textContent = '';
 
-  constructor(private _appRef: ApplicationRef,
+  constructor(
     private _elementRef: ElementRef,
     private _http: HttpClient,
     private _ngZone: NgZone,
@@ -79,14 +79,8 @@ export class DocViewer implements OnDestroy {
       `Failed to load document: ${url}. Error: ${error.statusText}`;
   }
 
-  private _clearLiveExamples() {
-    this._portalHosts.forEach(h => h.dispose());
-    this._portalHosts = [];
-  }
 
   ngOnDestroy() {
-    this._clearLiveExamples();
-
     if (this._documentFetchSubscription) {
       this._documentFetchSubscription.unsubscribe();
     }
