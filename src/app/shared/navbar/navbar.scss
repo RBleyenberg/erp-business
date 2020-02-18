@@ -21,12 +21,6 @@
   vertical-align: middle;
 }
 
-.dare-github-logo {
-  height: 21px;
-  margin: 0 7px 2px 0;
-  vertical-align: middle;
-}
-
 .dare-navbar-link {
   text-decoration: inherit;
   flex: 1;
@@ -55,9 +49,5 @@
 
   .dare-navbar {
     display: flex;
-  }
-
-  .dare-navbar--github-logo {
-    margin: 0;
   }
 }

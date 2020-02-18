@@ -37,11 +37,11 @@ const DOCS: {[key: string]: DocCategory[]} = {
       name: 'Main',
       items: [
         {
-          id: 'autocomplete',
+          id: 'placeholder',
           name: 'Relaties'
         },
         {
-          id: 'autocomplete',
+          id: 'placeholder',
           name: 'Contactpersonen'
         }
       ]
@@ -51,11 +51,11 @@ const DOCS: {[key: string]: DocCategory[]} = {
       name: 'Applications',
       items: [
         {
-          id: 'autocomplete',
+          id: 'placeholder',
           name: 'Todos'
         },
         {
-          id: 'autocomplete',
+          id: 'placeholder',
           name: 'Agenda'
         }
       ]
@@ -65,7 +65,7 @@ const DOCS: {[key: string]: DocCategory[]} = {
       name: 'General',
       items: [
         {
-          id: 'autocomplete',
+          id: 'placeholder',
           name: 'Adressen'
         }
       ]

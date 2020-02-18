@@ -3,7 +3,7 @@
   <nav [attr.aria-label]="linkSection.name + ' Table of Contents'">
     <a [href]="_rootUrl + '#' + link.id"
       *ngFor="let link of linkSection.links; let i = index"
-      class="dare-level-{{link.type}} docs-link"
+      class="dare-level-{{link.type}} dare-link"
       [class.dare-active]="link.active">
       {{link.name}}
     </a>
