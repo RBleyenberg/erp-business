@@ -3,7 +3,7 @@ body {
   margin: 0;
 }
 
-.docs-button[md-button], .docs-button[md-raised-button] {
+.dare-button[md-button], .dare-button[md-raised-button] {
   text-transform: uppercase;
 }
 
@@ -11,7 +11,7 @@ h1, h2 {
   font-weight: 400;
 }
 
-.docs-primary-header {
+.dare-primary-header {
   padding-left: 20px;
 
   h1 {
@@ -24,21 +24,21 @@ h1, h2 {
 
 // These styles are for controlling SVGs without using the /deep/ selector
 
-.docs-component-category-list-card-image svg {
+.dare-component-category-list-card-image svg {
   width: 100%;
 }
 
-.docs-footer-angular-logo svg {
+.dare-footer-angular-logo svg {
   height: 50px;
 }
 
-.docs-angular-logo svg {
+.dare-angular-logo svg {
   height: 26px;
   margin: 0 4px 3px 0;
   vertical-align: middle;
 }
 
-.docs-github-logo svg {
+.dare-github-logo svg {
   height: 21px;
   margin: 0 7px 2px 0;
   vertical-align: middle;

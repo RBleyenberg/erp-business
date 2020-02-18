@@ -23,11 +23,11 @@
   $foreground: map-get($theme, foreground);
   $next-theme: mat-palette($mat-red);
 
-  .docs-app-background {
+  .dare-app-background {
     background: mat-color($background, background);
   }
 
-  .docs-primary-header {
+  .dare-primary-header {
     background: mat-color($primary);
 
     h1 {
@@ -35,7 +35,7 @@
     }
   }
 
-  .docs-footer {
+  .dare-footer {
     background: mat-color($primary);
     color: mat-color($primary, default-contrast);
   }

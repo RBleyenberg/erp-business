@@ -1,21 +1,21 @@
 <!-- TODO: figure out if the <nav> should go inside of a <header> element. -->
-<nav class="docs-navbar-header" aria-label="Top Toolbar">
-  <a mat-button class="docs-button" routerLink="/" aria-label="Angular Material">
-    <img class="docs-angular-logo"
+<nav class="dare-navbar-header" aria-label="Top Toolbar">
+  <a mat-button class="dare-button" routerLink="/" aria-label="Angular Material">
+    <img class="dare-angular-logo"
          src="../../../assets/img/dare.png"
          alt="angular">
     <span>Dare business software</span>
   </a>
-  <a mat-button class="docs-navbar-hide-small docs-button"
+  <a mat-button class="dare-navbar-hide-small docs-button"
      *ngFor="let key of sectionKeys"
      [routerLink]="key">{{sections[key].name}}</a>
-  <a mat-button class="docs-navbar-hide-small docs-button" routerLink="guides">Guides</a>
+  <a mat-button class="dare-navbar-hide-small docs-button" routerLink="guides">Guides</a>
   <div class="flex-spacer"></div>
   <theme-picker></theme-picker>
 </nav>
-<nav class="docs-navbar docs-navbar-show-small" aria-label="Section Nav Bar">
-  <a mat-button class="docs-navbar-link"
+<nav class="dare-navbar docs-navbar-show-small" aria-label="Section Nav Bar">
+  <a mat-button class="dare-navbar-link"
     *ngFor="let key of sectionKeys"
     [routerLink]="key">{{sections[key].name}}</a>
-  <a mat-button class="docs-navbar-link" routerLink="guides">Guides</a>
+  <a mat-button class="dare-navbar-link" routerLink="guides">Guides</a>
 </nav>

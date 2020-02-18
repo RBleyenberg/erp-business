@@ -3,15 +3,15 @@
 
 // Mixin to create a css class for each fill, stroke, and stop-color for a given color.
 @mixin _svgColorProperties($className, $color) {
-  .docs-svg-#{$className}-fill {
+  .dare-svg-#{$className}-fill {
     fill: $color;
   }
 
-  .docs-svg-#{$className}-stroke {
+  .dare-svg-#{$className}-stroke {
     stroke: $color;
   }
 
-  .docs-svg-#{$className}-stop-color {
+  .dare-svg-#{$className}-stop-color {
     stop-color: $color;
   }
 }

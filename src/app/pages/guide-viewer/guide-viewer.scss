@@ -11,7 +11,7 @@ $guide-content-margin-side-xs: 15px;
   flex-grow: 1;
 }
 
-.docs-guide-wrapper {
+.dare-guide-wrapper {
   padding: 20px $content-padding-side 0;
   display: block;
   text-align: center;
@@ -22,7 +22,7 @@ $guide-content-margin-side-xs: 15px;
   }
 }
 
-.docs-guide-toc-and-content {
+.dare-guide-toc-and-content {
   display: flex;
   align-items: flex-start;
 
@@ -35,7 +35,7 @@ $guide-content-margin-side-xs: 15px;
   }
 }
 
-.docs-guide-content {
+.dare-guide-content {
   flex-grow: 1;
   width: 80%;
 

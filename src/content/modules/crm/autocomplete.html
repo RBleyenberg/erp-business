@@ -1,6 +1,6 @@
-<div class="docs-markdown"><p>FROM CONTENT</p>
+<div class="dare-markdown"><p>FROM CONTENT</p>
 
-        <h3 id="simple-autocomplete" class="docs-header-link">
+        <h3 id="simple-autocomplete" class="dare-header-link">
           Simple autocomplete
         </h3>
       <p>Start by adding a regular <code>matInput</code> to your template. Let&#39;s assume you&#39;re using the <code>formControl</code>
@@ -38,7 +38,7 @@ to the input&#39;s <code>matAutocomplete</code> property.</p>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-autocomplete</span>&gt;</span></code></pre>
 
 
-        <h3 id="adding-a-custom-filter" class="docs-header-link">
+        <h3 id="adding-a-custom-filter" class="dare-header-link">
           Adding a custom filter
         </h3>
       <p>At this point, the autocomplete panel should be toggleable on focus and options should be
@@ -57,7 +57,7 @@ filter that doesn&#39;t limit matches to the beginning of the string.</p>
 <div material-docs-example="autocomplete-filter"></div>
 
 
-        <h3 id="setting-separate-control-and-display-values" class="docs-header-link">
+        <h3 id="setting-separate-control-and-display-values" class="dare-header-link">
           Setting separate control and display values
         </h3>
       <p>If you want the option&#39;s control value (what is saved in the form) to be different than the option&#39;s
@@ -67,7 +67,7 @@ data as an object, but display just one of the option&#39;s string properties.</
 <p>To make this work, create a function on your component class that maps the control value to the
 desired display value. Then bind it to the autocomplete&#39;s <code>displayWith</code> property.</p>
 
-        <h3 id="automatically-highlighting-the-first-option" class="docs-header-link">
+        <h3 id="automatically-highlighting-the-first-option" class="dare-header-link">
           Automatically highlighting the first option
         </h3>
       <p>If your use case requires for the first autocomplete option to be highlighted when the user opens
@@ -76,7 +76,7 @@ component. This behavior can be configured globally using the <code>MAT_AUTOCOMP
 injection token.</p>
 
 
-        <h3 id="autocomplete-on-a-custom-input-element" class="docs-header-link">
+        <h3 id="autocomplete-on-a-custom-input-element" class="dare-header-link">
           Autocomplete on a custom input element
         </h3>
       <p>While <code>mat-autocomplete</code> supports attaching itself to a <code>mat-form-field</code>, you can also set it on
@@ -84,7 +84,7 @@ any other <code>input</code> element using the <code>matAutocomplete</code> attr
 the input looks like without having to bring in the extra functionality from <code>mat-form-field</code>.</p>
 
 
-        <h3 id="attaching-the-autocomplete-panel-to-a-different-element" class="docs-header-link">
+        <h3 id="attaching-the-autocomplete-panel-to-a-different-element" class="dare-header-link">
           Attaching the autocomplete panel to a different element
         </h3>
       <p>By default the autocomplete panel will be attached to your input element, however in some cases you
@@ -103,7 +103,7 @@ autocomplete is attached to using the <code>matAutocompleteOrigin</code> directi
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let option of options"</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">"option"</span>&gt;</span>{{option}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-autocomplete</span>&gt;</span></code></pre>
 
-        <h3 id="keyboard-interaction" class="docs-header-link">
+        <h3 id="keyboard-interaction" class="dare-header-link">
           Keyboard interaction
         </h3>
       <ul>
@@ -113,7 +113,7 @@ autocomplete is attached to using the <code>matAutocompleteOrigin</code> directi
 <li><kbd>ESCAPE</kbd>: Closes the autocomplete panel</li>
 </ul>
 
-        <h3 id="option-groups" class="docs-header-link">
+        <h3 id="option-groups" class="dare-header-link">
           Option groups
         </h3>
       <p><code>mat-option</code> can be collected into groups using the <code>mat-optgroup</code> element:</p>
@@ -127,7 +127,7 @@ autocomplete is attached to using the <code>matAutocompleteOrigin</code> directi
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-optgroup</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-autocomplete</span>&gt;</span></code></pre>
 
-        <h3 id="accessibility" class="docs-header-link">
+        <h3 id="accessibility" class="dare-header-link">
           Accessibility
         </h3>
       <p>The input for an autocomplete without text or labels should be given a meaningful label via

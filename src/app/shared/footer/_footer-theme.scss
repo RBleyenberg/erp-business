@@ -6,7 +6,7 @@
   $foreground: map-get($theme, foreground);
 
   app-footer {
-    .docs-footer-links a {
+    .dare-footer-links a {
       color: mat-color($primary, default-contrast);
     }
   }

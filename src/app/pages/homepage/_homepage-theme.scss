@@ -6,19 +6,19 @@
   $foreground: map-get($theme, foreground);
 
   app-homepage {
-    .docs-header-background {
+    .dare-header-background {
       background: mat-color($primary);
     }
 
-    .docs-header-headline {
+    .dare-header-headline {
       color: mat-color($primary, default-contrast);
     }
 
-    .docs-header-start {
+    .dare-header-start {
       color: mat-color($primary);
     }
 
-    .docs-homepage-row {
+    .dare-homepage-row {
       color: mat-color($foreground, secondary-text);
     }
   }

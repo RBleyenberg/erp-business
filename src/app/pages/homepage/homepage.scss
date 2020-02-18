@@ -2,16 +2,16 @@
 $margin-promotion-sections: 60px;
 $margin-promotion-sections-small: 15px;
 
-.docs-header-background {
+.dare-header-background {
   overflow: hidden;
 }
 
-.docs-header-section {
+.dare-header-section {
   text-align: center;
   padding-top: $margin-promotion-sections;
 }
 
-.docs-header-headline {
+.dare-header-headline {
   h1 {
     font-size: 56px;
     font-weight: 300;
@@ -27,7 +27,7 @@ $margin-promotion-sections-small: 15px;
   }
 }
 
-.docs-homepage-promo {
+.dare-homepage-promo {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -50,36 +50,36 @@ $margin-promotion-sections-small: 15px;
 }
 
 
-.docs-homepage-row {
+.dare-homepage-row {
   display: flex;
   max-width: 920px;
   margin: $margin-promotion-sections 0;
 }
 
-.docs-homepage-row .docs-svg-image{
+.dare-homepage-row .dare-svg-image{
   max-width: 90%;
 }
 
-.docs-homepage-reverse-row {
+.dare-homepage-reverse-row {
   flex-direction: row-reverse;
 }
 
-.docs-header-start,
-.docs-homepage-bottom-start {
+.dare-header-start,
+.dare-homepage-bottom-start {
   text-align: center;
   margin: $margin-promotion-sections 0;
 }
 
-.docs-homepage-promo-img,
-.docs-homepage-promo-desc {
+.dare-homepage-promo-img,
+.dare-homepage-promo-desc {
   width: 50%;
 }
 
-.docs-homepage-promo-img {
+.dare-homepage-promo-img {
   text-align: center;
 }
 
-.docs-homepage-promo-desc {
+.dare-homepage-promo-desc {
   line-height: 2;
   display: flex;
   flex-direction: column;
@@ -91,16 +91,16 @@ $margin-promotion-sections-small: 15px;
   * Rules for when the device is detected to be a small screen.
   */
 @media (max-width: 720px) {
-  .docs-header-section {
+  .dare-header-section {
     padding-top: $margin-promotion-sections-small;
   }
 
-  .docs-header-start,
-  .docs-homepage-bottom-start {
+  .dare-header-start,
+  .dare-homepage-bottom-start {
     margin: $margin-promotion-sections-small 0;
   }
 
-  .docs-homepage-row {
+  .dare-homepage-row {
     margin: $margin-promotion-sections-small 0;
   }
 }

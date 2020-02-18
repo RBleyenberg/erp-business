@@ -1,11 +1,11 @@
-<header class="docs-primary-header">
+<header class="dare-primary-header">
   <h1>Guides</h1>
 </header>
 
 <main>
-  <mat-nav-list class="docs-guide-list">
+  <mat-nav-list class="dare-guide-list">
     <a mat-list-item *ngFor="let guide of guideItems.getAllItems()"
-        class="docs-guide-item"
+        class="dare-guide-item"
         [routerLink]="['/guide/', guide.id]">
       {{guide.name}}
     </a>

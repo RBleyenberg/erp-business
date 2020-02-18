@@ -1,83 +1,83 @@
 // Styles for API docs generated via dgeni from material2 source JsDocs.
 
-.docs-api {
+.dare-api {
   max-width: 100%;
 }
 
 // Top header, e.g., "API documentation for dialog".
-.docs-api-h2 {
+.dare-api-h2 {
   font-size: 30px;
 }
 
 // Section header, e.g. "Services" or "Directives"
-.docs-api-h3 {
+.dare-api-h3 {
   font-size: 24px;
   font-weight: 400;
   margin-top: 45px;
 }
 
-.docs-api-h4 {
+.dare-api-h4 {
   font-size: 18px;
   font-weight: 400;
 }
 
-.docs-api-class-description {
+.dare-api-class-description {
   font-size: 12px;
 }
-.docs-api-property-name {
+.dare-api-property-name {
   margin: 0;
 }
 
-.docs-api-method-name-row,
-.docs-api-method-parameter-row,
-.docs-api-properties-name-cell {
+.dare-api-method-name-row,
+.dare-api-method-parameter-row,
+.dare-api-properties-name-cell {
   font-family: 'Roboto Mono', monospace;
   font-weight: 600;
 }
 
-.docs-api-properties-name-cell,
-.docs-api-method-parameter-row {
+.dare-api-properties-name-cell,
+.dare-api-method-parameter-row {
   font-size: 14px;
 }
 
-.docs-api-method-parameter-type {
+.dare-api-method-parameter-type {
   font-size: 12px;
 }
 
-.docs-api-class-name,
-.docs-api-module-import {
+.dare-api-class-name,
+.dare-api-module-import {
   display: inline;
 }
 
-.docs-api-method-name-cell {
+.dare-api-method-name-cell {
   font-weight: 700;
   font-size: 18px;
 }
 
-.docs-api-method-parameters-header-cell,
-.docs-api-method-returns-header-cell {
+.dare-api-method-parameters-header-cell,
+.dare-api-method-returns-header-cell {
   font-size: 14px;
 }
 
-.docs-api-input-marker,
-.docs-api-output-marker,
-.docs-api-deprecated-marker {
+.dare-api-input-marker,
+.dare-api-output-marker,
+.dare-api-deprecated-marker {
   // Size corresponding to "caption"-style text in the spec.
   font-size: 12px;
 }
 
-.docs-api-deprecated-marker {
+.dare-api-deprecated-marker {
   margin-right: 8px;
 }
 
-.docs-api-module-import,
-.docs-api-class-selector-name,
-.docs-api-class-export-name {
+.dare-api-module-import,
+.dare-api-class-selector-name,
+.dare-api-class-export-name {
   font-family: 'Roboto Mono', monospace;
   padding: 3px;
 }
 
-.docs-api-class-extends-type {
+.dare-api-class-extends-type {
   text-decoration: none;
   border-bottom: 1px dotted;
   color: inherit;
@@ -85,7 +85,7 @@
   font-size: 18px;
 }
 
-.docs-api-async-method-marker {
+.dare-api-async-method-marker {
   display: inline-block;
   vertical-align: baseline;
   padding: 2px 7px;
@@ -94,9 +94,9 @@
   font-size: 13px;
 }
 
-.docs-api-deprecated-marker,
-.docs-api-class-deprecated-marker,
-.docs-api-interface-deprecated-marker {
+.dare-api-deprecated-marker,
+.dare-api-class-deprecated-marker,
+.dare-api-interface-deprecated-marker {
   display: inline-block;
   font-weight: bold;
 
@@ -106,6 +106,6 @@
   }
 }
 
-.docs-api-deprecated-marker + .docs-api-property-name {
+.dare-api-deprecated-marker + .dare-api-property-name {
   text-decoration: line-through;
 }

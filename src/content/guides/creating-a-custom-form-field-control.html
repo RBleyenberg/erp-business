@@ -1,4 +1,4 @@
-<div class="docs-markdown"><h1>Creating a custom form field control</h1><p>It is possible to create custom form field controls that can be used inside <code>&lt;mat-form-field&gt;</code>. This
+<div class="dare-markdown"><h1>Creating a custom form field control</h1><p>It is possible to create custom form field controls that can be used inside <code>&lt;mat-form-field&gt;</code>. This
 can be useful if you need to create a component that shares a lot of common behavior with a form
 field, but adds some additional logic.</p>
 <p>For example in this guide we&#39;ll learn how to create a custom input for inputting US telephone
@@ -64,7 +64,7 @@ just a starting point for us to learn.)</p>
   }
 }</code></pre>
 
-        <h3 id="providing-our-component-as-a-matformfieldcontrol" class="docs-header-link">
+        <h3 id="providing-our-component-as-a-matformfieldcontrol" class="dare-header-link">
           <span header-link="providing-our-component-as-a-matformfieldcontrol"></span>
           Providing our component as a MatFormFieldControl
         </h3>
@@ -86,12 +86,12 @@ various methods and properties declared by the interface we just implemented. To
 the <code>MatFormFieldControl</code> interface, see the
 <a href="https://material.angular.io/crm/form-field/api">form field API documentation</a>.</p>
 
-        <h3 id="implementing-the-methods-and-properties-of-matformfieldcontrol" class="docs-header-link">
+        <h3 id="implementing-the-methods-and-properties-of-matformfieldcontrol" class="dare-header-link">
           <span header-link="implementing-the-methods-and-properties-of-matformfieldcontrol"></span>
           Implementing the methods and properties of MatFormFieldControl
         </h3>
       
-        <h4 id="-code-value-code-" class="docs-header-link">
+        <h4 id="-code-value-code-" class="dare-header-link">
           <span header-link="-code-value-code-"></span>
           <code>value</code>
         </h4>
@@ -99,7 +99,7 @@ the <code>MatFormFieldControl</code> interface, see the
 type we used for the type parameter when we implemented <code>MatFormFieldControl</code>. Since our component
 already has a value property, we don&#39;t need to do anything for this one.</p>
 
-        <h4 id="-code-statechanges-code-" class="docs-header-link">
+        <h4 id="-code-statechanges-code-" class="dare-header-link">
           <span header-link="-code-statechanges-code-"></span>
           <code>stateChanges</code>
         </h4>
@@ -120,7 +120,7 @@ ngOnDestroy() {
   <span class="hljs-keyword">this</span>.stateChanges.complete();
 }</code></pre>
 
-        <h4 id="-code-id-code-" class="docs-header-link">
+        <h4 id="-code-id-code-" class="dare-header-link">
           <span header-link="-code-id-code-"></span>
           <code>id</code>
         </h4>
@@ -131,7 +131,7 @@ element and just generate a unique ID for it.</p>
 
 <span class="hljs-meta">@HostBinding</span>() id = <span class="hljs-string">`example-tel-input-<span class="hljs-subst">${MyTelInput.nextId++}</span>`</span>;</code></pre>
 
-        <h4 id="-code-placeholder-code-" class="docs-header-link">
+        <h4 id="-code-placeholder-code-" class="dare-header-link">
           <span header-link="-code-placeholder-code-"></span>
           <code>placeholder</code>
         </h4>
@@ -150,7 +150,7 @@ placeholder changes.</p>
 }
 <span class="hljs-keyword">private</span> _placeholder: <span class="hljs-built_in">string</span>;</code></pre>
 
-        <h4 id="-code-ngcontrol-code-" class="docs-header-link">
+        <h4 id="-code-ngcontrol-code-" class="dare-header-link">
           <span header-link="-code-ngcontrol-code-"></span>
           <code>ngControl</code>
         </h4>
@@ -201,7 +201,7 @@ declaration). If so you may get a <em>cannot instantiate cyclic dependency</em> 
 }</code></pre>
 <p>For additional information about <code>ControlValueAccessor</code> see the <a href="https://angular.io/api/forms/ControlValueAccessor">API docs</a>.</p>
 
-        <h4 id="-code-focused-code-" class="docs-header-link">
+        <h4 id="-code-focused-code-" class="dare-header-link">
           <span header-link="-code-focused-code-"></span>
           <code>focused</code>
         </h4>
@@ -225,7 +225,7 @@ ngOnDestroy() {
   <span class="hljs-keyword">this</span>.fm.stopMonitoring(<span class="hljs-keyword">this</span>.elRef.nativeElement);
 }</code></pre>
 
-        <h4 id="-code-empty-code-" class="docs-header-link">
+        <h4 id="-code-empty-code-" class="dare-header-link">
           <span header-link="-code-empty-code-"></span>
           <code>empty</code>
         </h4>
@@ -236,7 +236,7 @@ empty if all of the parts are empty.</p>
   <span class="hljs-keyword">return</span> !n.area &amp;&amp; !n.exchange &amp;&amp; !n.subscriber;
 }</code></pre>
 
-        <h4 id="-code-shouldlabelfloat-code-" class="docs-header-link">
+        <h4 id="-code-shouldlabelfloat-code-" class="dare-header-link">
           <span header-link="-code-shouldlabelfloat-code-"></span>
           <code>shouldLabelFloat</code>
         </h4>
@@ -256,7 +256,7 @@ the <code>–</code> characters when it&#39;s not floating.</p>
   <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
 }</code></pre>
 
-        <h4 id="-code-required-code-" class="docs-header-link">
+        <h4 id="-code-required-code-" class="dare-header-link">
           <span header-link="-code-required-code-"></span>
           <code>required</code>
         </h4>
@@ -273,7 +273,7 @@ change detection if the required state changes.</p>
 }
 <span class="hljs-keyword">private</span> _required = <span class="hljs-literal">false</span>;</code></pre>
 
-        <h4 id="-code-disabled-code-" class="docs-header-link">
+        <h4 id="-code-disabled-code-" class="dare-header-link">
           <span header-link="-code-disabled-code-"></span>
           <code>disabled</code>
         </h4>
@@ -289,7 +289,7 @@ make up our component.</p>
 }
 <span class="hljs-keyword">private</span> _disabled = <span class="hljs-literal">false</span>;</code></pre>
 
-        <h4 id="-code-errorstate-code-" class="docs-header-link">
+        <h4 id="-code-errorstate-code-" class="dare-header-link">
           <span header-link="-code-errorstate-code-"></span>
           <code>errorState</code>
         </h4>
@@ -297,7 +297,7 @@ make up our component.</p>
 using an <code>NgControl</code> in this example, we don&#39;t need to do anything other than just set it to <code>false</code>.</p>
 <pre><code class="language-ts">errorState = <span class="hljs-literal">false</span>;</code></pre>
 
-        <h4 id="-code-controltype-code-" class="docs-header-link">
+        <h4 id="-code-controltype-code-" class="dare-header-link">
           <span header-link="-code-controltype-code-"></span>
           <code>controlType</code>
         </h4>
@@ -308,7 +308,7 @@ we&#39;ll use <code>example-tel-input</code> as our control type which will resu
 class <code>mat-form-field-example-tel-input</code>.</p>
 <pre><code class="language-ts">controlType = <span class="hljs-string">'example-tel-input'</span>;</code></pre>
 
-        <h4 id="-code-setdescribedbyids-ids-string-code-" class="docs-header-link">
+        <h4 id="-code-setdescribedbyids-ids-string-code-" class="dare-header-link">
           <span header-link="-code-setdescribedbyids-ids-string-code-"></span>
           <code>setDescribedByIds(ids: string[])</code>
         </h4>
@@ -321,7 +321,7 @@ setDescribedByIds(ids: <span class="hljs-built_in">string</span>[]) {
   <span class="hljs-keyword">this</span>.describedBy = ids.join(<span class="hljs-string">' '</span>);
 }</code></pre>
 
-        <h4 id="-code-oncontainerclick-event-mouseevent-code-" class="docs-header-link">
+        <h4 id="-code-oncontainerclick-event-mouseevent-code-" class="dare-header-link">
           <span header-link="-code-oncontainerclick-event-mouseevent-code-"></span>
           <code>onContainerClick(event: MouseEvent)</code>
         </h4>
@@ -335,7 +335,7 @@ click. In our case we&#39;ll just focus the first <code>&lt;input&gt;</code> if 
   }
 }</code></pre>
 
-        <h3 id="trying-it-out" class="docs-header-link">
+        <h3 id="trying-it-out" class="dare-header-link">
           <span header-link="trying-it-out"></span>
           Trying it out
         </h3>

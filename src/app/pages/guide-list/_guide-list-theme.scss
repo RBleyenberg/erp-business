@@ -8,7 +8,7 @@
   $foreground: map-get($theme, foreground);
   $is-dark-theme: map-get($theme, is-dark);
 
-  .docs-guide-list .docs-guide-item {
+  .dare-guide-list .dare-guide-item {
     color: mat-color($primary, if($is-dark-theme, 200, default));
   }
 }

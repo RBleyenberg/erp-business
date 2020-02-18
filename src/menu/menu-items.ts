@@ -20,7 +20,7 @@ export interface DocSection {
   summary: string;
 }
 
-const CDK = 'cdk';
+const PRODUCTS = 'products';
 const CRM = 'crm';
 export const SECTIONS: {[key: string]: DocSection} = {
   [CRM]: {
@@ -28,9 +28,9 @@ export const SECTIONS: {[key: string]: DocSection} = {
     summary: 'Angular Material comprises a range of crm which implement common ' +
     'interaction patterns according to the Material Design specification.'
   },
-  [CDK]: {
-    name: 'CDK',
-    summary: 'The Component Dev Kit (CDK) is a set of tools that implement common interaction '
+  [PRODUCTS]: {
+    name: 'PRODUCTS',
+    summary: 'The Component Dev Kit (PRODUCTS) is a set of tools that implement common interaction '
   },
 };
 
@@ -50,7 +50,7 @@ const DOCS: {[key: string]: DocCategory[]} = {
       ]
     }
   ],
-  [CDK] : []
+  [PRODUCTS] : []
 };
 
 for (const category of DOCS[CRM]) {
@@ -59,18 +59,18 @@ for (const category of DOCS[CRM]) {
   }
 }
 
-for (const category of DOCS[CDK]) {
+for (const category of DOCS[PRODUCTS]) {
   for (const doc of category.items) {
-    doc.packageName = 'cdk';
+    doc.packageName = 'products';
   }
 }
 
 const ALL_CRM = DOCS[CRM].reduce(
   (result: DocItem[], category: DocCategory) => result.concat(category.items), []);
-const ALL_CDK = DOCS[CDK].reduce(
-  (result: DocItem[], cdk: DocCategory) => result.concat(cdk.items), []);
-const ALL_DOCS = ALL_CRM.concat(ALL_CDK);
-const ALL_CATEGORIES = DOCS[CRM].concat(DOCS[CDK]);
+const ALL_PRODUCTS = DOCS[PRODUCTS].reduce(
+  (result: DocItem[], products: DocCategory) => result.concat(products.items), []);
+const ALL_DOCS = ALL_CRM.concat(ALL_PRODUCTS);
+const ALL_CATEGORIES = DOCS[CRM].concat(DOCS[PRODUCTS]);
 
 @Injectable()
 export class DocumentationItems {
@@ -82,14 +82,14 @@ export class DocumentationItems {
     if (section === CRM) {
       return ALL_CRM;
     }
-    if (section === CDK) {
-      return ALL_CDK;
+    if (section === PRODUCTS) {
+      return ALL_PRODUCTS;
     }
     return [];
   }
 
   getItemById(id: string, section: string): DocItem | undefined {
-    const sectionLookup = section === 'cdk' ? 'cdk' : 'crm';
+    const sectionLookup = section === 'products' ? 'products' : 'crm';
     console.log("sectionLookup " + sectionLookup)
     return ALL_DOCS.find(doc => doc.id === id && doc.packageName === sectionLookup);
   }

@@ -4,7 +4,7 @@
   </h2>
   <doc-viewer
       documentUrl="/docs-content/modules/{{docItem?.packageName}}/{{docItem?.id}}.html"
-      class="docs-component-view-text-content docs-component-overview"
+      class="dare-component-view-text-content docs-component-overview"
       (contentRendered)="updateTableOfContents('Overview Content', $event)">
   </doc-viewer>
   <table-of-contents #toc container=".mat-drawer-content" *ngIf="showToc | async"></table-of-contents>

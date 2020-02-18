@@ -10,7 +10,7 @@
   $is-dark-theme: map-get($theme, is-dark);
   $exportBackgroundOpacity: if($is-dark-theme, 0.06, 0.03);
 
-  .docs-markdown {
+  .dare-markdown {
     a {
       color: mat-color($primary, if($is-dark-theme, 200, default));
     }

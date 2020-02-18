@@ -10,16 +10,16 @@
   flex-direction: column;
 }
 
-.docs-toc-container {
+.dare-toc-container {
   width: 100%;
   padding: 5px 0 10px 10px;
 
-  & + .docs-toc-container {
+  & + .dare-toc-container {
     padding-top: 8px;
   }
 }
 
-.docs-toc-heading {
+.dare-toc-heading {
   margin: 0;
   padding: 0;
   font-size: 13px;
@@ -38,6 +38,6 @@ a {
   overflow: hidden;
 }
 
-.docs-level-h4 {
+.dare-level-h4 {
   margin-left: 12px;
 }

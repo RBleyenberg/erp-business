@@ -1,6 +1,6 @@
 @import '../../../styles/constants';
 
-.docs-component-list-category {
+.dare-component-list-category {
   margin: 20px;
 
   @media (max-width: $small-breakpoint-width) {
@@ -10,7 +10,7 @@
   }
 }
 
-.docs-component-list-item {
+.dare-component-list-item {
   display: inline-block;
   margin: 20px;
   vertical-align: top;
@@ -25,24 +25,24 @@
   }
 }
 
-.docs-component-list-icon-spacer {
+.dare-component-list-icon-spacer {
   flex-grow: 1;
 }
 
-.docs-component-list-card-title {
+.dare-component-list-card-title {
   margin: 0 0 0 -8px;
 }
 
-.docs-component-list-card-header {
+.dare-component-list-card-header {
   align-items: center;
 }
 
-.docs-component-list-card-summary {
+.dare-component-list-card-summary {
   min-height: 2.4em;
   margin-top: 20px;
 }
 
-.docs-component-list-item-icon {
+.dare-component-list-item-icon {
   margin: 0 0 0 10px;
   width: 40px;
   height: 40px;

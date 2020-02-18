@@ -1,4 +1,4 @@
-.docs-navbar-header {
+.dare-navbar-header {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -15,28 +15,28 @@
   flex-grow: 1;
 }
 
-.docs-angular-logo {
+.dare-angular-logo {
   height: 42px;
   margin: 0 4px 0 0;
   vertical-align: middle;
 }
 
-.docs-github-logo {
+.dare-github-logo {
   height: 21px;
   margin: 0 7px 2px 0;
   vertical-align: middle;
 }
 
-.docs-navbar-link {
+.dare-navbar-link {
   text-decoration: inherit;
   flex: 1;
 }
 
-.docs-navbar {
+.dare-navbar {
   display: none;
 }
 
-.docs-navbar-show-small {
+.dare-navbar-show-small {
   display: none;
 }
 
@@ -45,19 +45,19 @@
   * Moves content two rows instead of one.
   */
 @media (max-width: 720px) {
-  .docs-navbar-hide-small {
+  .dare-navbar-hide-small {
     display: none;
   }
 
-  .docs-navbar-show-small {
+  .dare-navbar-show-small {
     display: block;
   }
 
-  .docs-navbar {
+  .dare-navbar {
     display: flex;
   }
 
-  .docs-navbar--github-logo {
+  .dare-navbar--github-logo {
     margin: 0;
   }
 }
