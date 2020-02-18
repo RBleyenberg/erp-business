@@ -1,13 +1,9 @@
 @import '../../../styles/constants';
 
-.dare-component-category-list-summary {
-  padding: 25px 40px 0;
-}
-
 .dare-component-category-list {
   display: flex;
   flex-wrap: wrap;
-  padding: 20px;
+ // padding: 20px;
 
   @media (max-width: $small-breakpoint-width) {
     justify-content: center;

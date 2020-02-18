@@ -9,8 +9,8 @@
   <a mat-button class="dare-navbar-hide-small docs-button"
      *ngFor="let key of sectionKeys"
      [routerLink]="key">{{sections[key].name}}</a>
-  <a mat-button class="dare-navbar-hide-small docs-button" routerLink="guides">Guides</a>
   <div class="flex-spacer"></div>
+  <a mat-button class="dare-navbar-hide-small docs-button" routerLink="guides">Guides</a>
   <theme-picker></theme-picker>
 </nav>
 <nav class="dare-navbar docs-navbar-show-small" aria-label="Section Nav Bar">

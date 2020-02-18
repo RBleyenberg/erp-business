@@ -17,20 +17,16 @@ export interface DocCategory {
 
 export interface DocSection {
   name: string;
-  summary: string;
 }
 
 const PRODUCTS = 'products';
 const CRM = 'crm';
 export const SECTIONS: {[key: string]: DocSection} = {
   [CRM]: {
-    name: 'CRM',
-    summary: 'Angular Material comprises a range of crm which implement common ' +
-    'interaction patterns according to the Material Design specification.'
+    name: 'CRM'
   },
   [PRODUCTS]: {
-    name: 'PRODUCTS',
-    summary: 'The Component Dev Kit (PRODUCTS) is a set of tools that implement common interaction '
+    name: 'PRODUCTS'
   },
 };
 

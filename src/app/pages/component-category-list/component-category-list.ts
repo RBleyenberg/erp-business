@@ -33,7 +33,6 @@ export class ComponentCategoryList implements OnInit, OnDestroy {
       const sectionName = params['section'];
       const section = SECTIONS[sectionName];
       this._componentPageTitle.title = section.name;
-      this._categoryListSummary = section.summary;
     });
   }
 
