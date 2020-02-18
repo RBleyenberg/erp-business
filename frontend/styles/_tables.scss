@@ -1,6 +1,6 @@
 @import './constants';
 
-.dare-api table,
+.dare-documentation table,
 .dare-markdown-table {
   border-collapse: collapse;
   border-radius: 2px;
@@ -10,7 +10,7 @@
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24), 0 0 2px rgba(0, 0, 0, 0.12);
 }
 
-.dare-api th,
+.dare-documentation th,
 .dare-markdown-th {
   font-weight: 400;
   max-width: 100px;
@@ -18,16 +18,16 @@
   text-align: left;
 }
 
-.dare-api td,
+.dare-documentation td,
 .dare-markdown-td {
   font-weight: 400;
   padding: 8px 16px;
 
   @media (max-width: $extra-small-breakpoint-width) {
-    &.dare-api-properties-name-cell,
-    &.dare-api-method-parameter-cell,
-    &.dare-api-method-returns-type-cell,
-    &.dare-api-method-description-cell {
+    &.dare-documentation-properties-name-cell,
+    &.dare-documentation-method-parameter-cell,
+    &.dare-documentation-method-returns-type-cell,
+    &.dare-documentation-method-description-cell {
       min-width: 80px;
       word-break: break-word;
     }
@@ -36,17 +36,17 @@
 
 
 @media (max-width: $small-breakpoint-width) {
-  .dare-api table,
+  .dare-documentation table,
   .dare-markdown-table {
     margin: 0 0 32px 0;
   }
 
-  .dare-api th,
+  .dare-documentation th,
   .dare-markdown-th {
     padding: 6px 16px;
   }
 
-  .dare-api td,
+  .dare-documentation td,
   .dare-markdown-td {
     padding: 4px 8px;
   }

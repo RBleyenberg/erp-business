@@ -1,7 +1,6 @@
 @import '../../node_modules/@angular/material/theming';
 
-// Mixin to apply theme colors for generated API docs.
-@mixin docs-site-api-theme($theme) {
+@mixin docs-site-documentation-theme($theme) {
   $primary: map-get($theme, primary);
   $accent: map-get($theme, accent);
   $warn: map-get($theme, warn);
@@ -10,26 +9,26 @@
   $is-dark-theme: map-get($theme, is-dark);
 
   @if $is-dark-theme {
-    .dare-api-method-name-cell {
+    .dare-documentation-method-name-cell {
       color: mat-color($primary, 200);
     }
 
-    .dare-api-method-returns-type,
-    .dare-api-method-parameter-type {
+    .dare-documentation-method-returns-type,
+    .dare-documentation-method-parameter-type {
       color: mat-color($primary, 200);
     }
   } @else {
-    .dare-api-method-name-cell {
+    .dare-documentation-method-name-cell {
       color: mat-color($primary, 800);
     }
 
-    .dare-api-method-returns-type,
-    .dare-api-method-parameter-type {
+    .dare-documentation-method-returns-type,
+    .dare-documentation-method-parameter-type {
       color: mat-color($primary, darker);
     }
   }
 
-  .dare-api-async-method-marker {
+  .dare-documentation-async-method-marker {
     $async-method-marker-hue: if($is-dark-theme, 200, 400);
     background-color: mat-color($primary, $async-method-marker-hue);
     color: mat-color($primary, '#{$async-method-marker-hue}-contrast');
@@ -37,19 +36,19 @@
 
   // Force the top-level API docs header to be hidden, since this is already
   // captured in the top nav-bar.
-  .dare-api-h1 {
+  .dare-documentation-h1 {
     display: none !important;
   }
 
   // Prevent p tags from not breaking, causing x axis overflows.
-  .dare-api > p {
+  .dare-documentation > p {
     word-break: break-word;
   }
 
-  .dare-api-class-name,
-  .dare-api-module-import,
-  .dare-api-class-selector-name,
-  .dare-api-class-export-name {
+  .dare-documentation-class-name,
+  .dare-documentation-module-import,
+  .dare-documentation-class-selector-name,
+  .dare-documentation-class-export-name {
     background: rgba(mat-color($foreground, secondary-text), 0.06);
   }
 }

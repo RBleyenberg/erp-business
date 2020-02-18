@@ -10,17 +10,17 @@
   $is-dark-theme: map-get($theme, is-dark);
   $tableBorderOpacity: if($is-dark-theme, 0.08, 0.03);
   
-  .dare-api table,
+  .dare-documentation table,
   .dare-markdown-table {
     color: mat-color($foreground, text);
   }
 
-  .dare-api th,
+  .dare-documentation th,
   .dare-markdown-th {
     background: mat-color($background, app-bar);
   }
 
-  .dare-api td,
+  .dare-documentation td,
   .dare-markdown-td {
     border: 1px solid rgba(mat-color($foreground, secondary-text), $tableBorderOpacity);
   }

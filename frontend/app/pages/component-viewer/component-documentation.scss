@@ -1,4 +1,4 @@
-.dare-api-class-name {
+.dare-documentation-class-name {
   margin-top: 28px;
   margin-bottom: 0;
   display: block;
@@ -11,14 +11,14 @@
   }
 }
 
-.dare-api-type-alias-name,
-.dare-api-class-name {
+.dare-documentation-type-alias-name,
+.dare-documentation-class-name {
   @media (max-width: 399px) {
     word-break: break-word;
   }
 }
 
-.dare-api-h3 {
+.dare-documentation-h3 {
   font-weight: 300;
   font-size: 24px;
   line-height: 32px;
@@ -26,22 +26,22 @@
   padding-bottom: 3px;
 }
 
-.dare-api-method-name-cell,
-.dare-api-method-header,
-.dare-api-method-description-cell,
-.dare-api-property-description,
-.dare-api-class-export-label,
-.dare-api-directive-selectors,
-.dare-api-class-description,
-.dare-api-class-export-name {
+.dare-documentation-method-name-cell,
+.dare-documentation-method-header,
+.dare-documentation-method-description-cell,
+.dare-documentation-property-description,
+.dare-documentation-class-export-label,
+.dare-documentation-directive-selectors,
+.dare-documentation-class-description,
+.dare-documentation-class-export-name {
   font-size: 15px;
 }
 
-.dare-api-class-description {
+.dare-documentation-class-description {
   line-height: 24px;
 }
 
-.dare-api-property-type {
+.dare-documentation-property-type {
   font-weight: bold;
   font-size: 14px;
   margin-top: 5px;
