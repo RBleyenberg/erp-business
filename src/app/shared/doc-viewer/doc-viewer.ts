@@ -1,4 +1,3 @@
-import { DomPortalOutlet } from '@angular/cdk/portal';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Component, ElementRef, EventEmitter, Input, NgZone, OnDestroy, Output, SecurityContext } from '@angular/core';
@@ -54,7 +53,7 @@ export class DocViewer implements OnDestroy {
    */
   private updateDocument(rawDocument: string) {
     // Replace all relative fragment URLs with absolute fragment URLs. e.g. "#my-section" becomes
-    // "/components/button/api#my-section". This is necessary because otherwise these fragment
+    // "/crm/button/api#my-section". This is necessary because otherwise these fragment
     // links would redirect to "/#my-section".
     rawDocument = rawDocument.replace(/href="#([^"]*)"/g, (_m: string, fragmentUrl: string) => {
       const absoluteUrl = `${location.pathname}#${fragmentUrl}`;
@@ -64,8 +63,8 @@ export class DocViewer implements OnDestroy {
     this._elementRef.nativeElement.innerHTML = rawDocument;
     this.textContent = this._elementRef.nativeElement.textContent;
 
-    // Resolving and creating components dynamically in Angular happens synchronously, but since
-    // we want to emit the output if the components are actually rendered completely, we wait
+    // Resolving and creating crm dynamically in Angular happens synchronously, but since
+    // we want to emit the output if the crm are actually rendered completely, we wait
     // until the Angular zone becomes stable.
     this._ngZone.onStable
       .pipe(take(1))

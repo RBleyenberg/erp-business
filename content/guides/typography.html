@@ -72,12 +72,12 @@ available levels are:</p>
 </tr>
 <tr>
 <td><code>button</code></td>
-<td>None. Used only in components.</td>
+<td>None. Used only in crm.</td>
 <td>Buttons and anchors.</td>
 </tr>
 <tr>
 <td><code>input</code></td>
-<td>None. Used only in components.</td>
+<td>None. Used only in crm.</td>
 <td>Form input fields.</td>
 </tr>
 </tbody></table>
@@ -129,24 +129,24 @@ different Sass mixins.</p>
 <pre><code class="language-scss"><span class="hljs-comment">// Override typography CSS classes (e.g., mat-h1, mat-display-1, mat-typography, etc.).</span>
 @<span class="hljs-keyword">include</span> mat-base-typography(<span class="hljs-variable">$custom-typography</span>);
 
-<span class="hljs-comment">// Override typography for a specific Angular Material components.</span>
+<span class="hljs-comment">// Override typography for a specific Angular Material crm.</span>
 @<span class="hljs-keyword">include</span> mat-checkbox-typography(<span class="hljs-variable">$custom-typography</span>);
 
-<span class="hljs-comment">// Override typography for all Angular Material, including mat-base-typography and all components.</span>
+<span class="hljs-comment">// Override typography for all Angular Material, including mat-base-typography and all crm.</span>
 @<span class="hljs-keyword">include</span> angular-material-typography(<span class="hljs-variable">$custom-typography</span>);</code></pre>
 <p>If you&#39;re using Material&#39;s theming, you can also pass in your typography config to the
 <code>mat-core</code> mixin:</p>
 <pre><code class="language-scss"><span class="hljs-comment">// Override the typography in the core CSS.</span>
 @<span class="hljs-keyword">include</span> mat-core(<span class="hljs-variable">$custom-typography</span>);</code></pre>
 <p>For more details about the typography functions and default config, see the
-<a href="https://github.com/angular/components/blob/master/src/material/core/typography/_typography.scss">source</a>.</p>
+<a href="https://github.com/angular/crm/blob/master/src/material/core/typography/_typography.scss">source</a>.</p>
 
         <h3 id="material-typography-in-your-custom-css" class="docs-header-link">
           <span header-link="material-typography-in-your-custom-css"></span>
           Material typography in your custom CSS
         </h3>
       <p>Angular Material includes typography utility mixins and functions that you can use to customize your
-own components:</p>
+own crm:</p>
 <ul>
 <li><code>mat-font-size($config, $level)</code> - Gets the <code>font-size</code>, based on the provided config and level.</li>
 <li><code>mat-font-family($config)</code> - Gets the <code>font-family</code>, based on the provided config.</li>

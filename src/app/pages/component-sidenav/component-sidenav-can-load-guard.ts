@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {CanActivate, ActivatedRouteSnapshot, Router, RouterStateSnapshot} from '@angular/router';
-import {SECTIONS} from '../../shared/documentation-items/documentation-items';
+import { SECTIONS } from 'menu/menu-items';
 
 /**
  * Guard to determine if the sidenav can load, based on whether the section exists in documentation
@@ -10,6 +10,7 @@ import {SECTIONS} from '../../shared/documentation-items/documentation-items';
 export class CanActivateComponentSidenav implements CanActivate {
   constructor(private router: Router) {}
 
+  
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     // Searches if the section defined in the base UrlSegment is a valid section from the
     // documentation items. If found, returns true to allow activation, otherwise blocks activation

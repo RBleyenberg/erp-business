@@ -12,7 +12,6 @@ export interface DocItem {
   packageName?: string;
   examples?: string[];
   apiDocId?: string;
-  additionalApiDocs?: AdditionalApiDoc[];
 }
 
 export interface DocCategory {
@@ -28,11 +27,11 @@ export interface DocSection {
 }
 
 const CDK = 'cdk';
-const COMPONENTS = 'components';
+const CRM = 'crm';
 export const SECTIONS: {[key: string]: DocSection} = {
-  [COMPONENTS]: {
-    name: 'Components',
-    summary: 'Angular Material comprises a range of components which implement common ' +
+  [CRM]: {
+    name: 'CRM',
+    summary: 'Angular Material comprises a range of crm which implement common ' +
     'interaction patterns according to the Material Design specification.'
   },
   [CDK]: {
@@ -43,7 +42,7 @@ export const SECTIONS: {[key: string]: DocSection} = {
 
 
 const DOCS: {[key: string]: DocCategory[]} = {
-  [COMPONENTS]: [
+  [CRM]: [
     {
       id: 'forms',
       name: 'Form Controls',
@@ -52,8 +51,7 @@ const DOCS: {[key: string]: DocCategory[]} = {
         {
           id: 'autocomplete',
           name: 'Autocomplete',
-          summary: 'Suggests relevant options as the user types.',
-          additionalApiDocs: [{name: 'Testing', path: 'material-autocomplete-testing.html'}],
+          summary: 'Suggests relevant options as the user types.'
         }
       ]
     }
@@ -61,7 +59,7 @@ const DOCS: {[key: string]: DocCategory[]} = {
   [CDK] : []
 };
 
-for (const category of DOCS[COMPONENTS]) {
+for (const category of DOCS[CRM]) {
   for (const doc of category.items) {
     doc.packageName = 'material';
   }
@@ -73,12 +71,12 @@ for (const category of DOCS[CDK]) {
   }
 }
 
-const ALL_COMPONENTS = DOCS[COMPONENTS].reduce(
+const ALL_CRM = DOCS[CRM].reduce(
   (result: DocItem[], category: DocCategory) => result.concat(category.items), []);
 const ALL_CDK = DOCS[CDK].reduce(
   (result: DocItem[], cdk: DocCategory) => result.concat(cdk.items), []);
-const ALL_DOCS = ALL_COMPONENTS.concat(ALL_CDK);
-const ALL_CATEGORIES = DOCS[COMPONENTS].concat(DOCS[CDK]);
+const ALL_DOCS = ALL_CRM.concat(ALL_CDK);
+const ALL_CATEGORIES = DOCS[CRM].concat(DOCS[CDK]);
 
 @Injectable()
 export class DocumentationItems {
@@ -87,8 +85,8 @@ export class DocumentationItems {
   }
 
   getItems(section: string): DocItem[] {
-    if (section === COMPONENTS) {
-      return ALL_COMPONENTS;
+    if (section === CRM) {
+      return ALL_CRM;
     }
     if (section === CDK) {
       return ALL_CDK;

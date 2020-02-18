@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 
 /**
- * Service responsible for setting the title that appears above the components and guide pages.
+ * Service responsible for setting the title that appears above the crm and guide pages.
  */
 @Injectable({providedIn: 'root'})
 export class ComponentPageTitle {

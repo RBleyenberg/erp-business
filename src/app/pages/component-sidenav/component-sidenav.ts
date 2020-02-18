@@ -1,5 +1,4 @@
 import { Component, Input, NgModule, NgZone, OnDestroy, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
-import { DocumentationItems } from '../../shared/documentation-items/documentation-items';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
 import { ActivatedRoute, NavigationEnd, Params, Router, RouterModule, Routes } from '@angular/router';
@@ -20,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SvgViewerModule } from '../../shared/svg-viewer/svg-viewer';
 import { MatDrawerToggleResult } from '@angular/material/sidenav/drawer';
 import { MatListModule } from '@angular/material/list';
+import { DocumentationItems } from 'menu/menu-items';
 
 // These constants are used by the ComponentSidenav for orchestrating the MatSidenav in a responsive
 // way. This includes hiding the sidenav, defaulting it to open, changing the mode from over to

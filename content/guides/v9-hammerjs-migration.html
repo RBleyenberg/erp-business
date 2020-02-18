@@ -8,7 +8,7 @@ deprecated and will be removed in version 10.</p>
           <span header-link="why-is-a-migration-needed-"></span>
           Why is a migration needed?
         </h3>
-      <p>Since HammerJS previously was a requirement for a few Angular Material components, projects might
+      <p>Since HammerJS previously was a requirement for a few Angular Material crm, projects might
 have installed <code>HammerJS</code> exclusively for Angular Material. Since HammerJS is no longer needed when
 updating to v9, the dependency on HammerJS can be removed if it&#39;s not used directly in your
 application.</p>
@@ -85,9 +85,9 @@ automatically, but the migration will report such patterns and ask you to perfor
           <span header-link="how-to-migrate-my-tests-"></span>
           How to migrate my tests?
         </h3>
-      <p>Components in your project might use Angular Material components which previously depended
-upon HammerJS. There might be unit tests for these components which also test gesture functionality
-of the Angular Material components. For such unit tests, identify all failing gesture tests. Then
+      <p>Components in your project might use Angular Material crm which previously depended
+upon HammerJS. There might be unit tests for these crm which also test gesture functionality
+of the Angular Material crm. For such unit tests, identify all failing gesture tests. Then
 you should rework these tests to dispatch proper events, in order to simulate gestures, or
 delete the tests. Specifically gesture tests for the <code>&lt;mat-slide-toggle&gt;</code> should be removed.
 This is because the <code>&lt;mat-slide-toggle&gt;</code> no longer supports gestures.</p>

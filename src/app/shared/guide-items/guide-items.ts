@@ -23,9 +23,9 @@ const GUIDES = [
     document: '/docs-content/guides/theming.html',
   },
   {
-    id: 'theming-your-components',
-    name: 'Theming your own components',
-    document: '/docs-content/guides/theming-your-components.html',
+    id: 'theming-your-crm',
+    name: 'Theming your own crm',
+    document: '/docs-content/guides/theming-your-crm.html',
   },
   {
     id: 'typography',

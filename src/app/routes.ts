@@ -6,7 +6,7 @@ export const MATERIAL_DOCS_ROUTES: Routes = [
     path: '', pathMatch: 'full',
     loadChildren: () => import('./pages/homepage').then(m => m.HomepageModule)
   },
-  {path: 'categories', redirectTo: '/components/categories'},
+  {path: 'categories', redirectTo: '/crm/categories'},
   {
     path: 'guides',
     loadChildren: () => import('./pages/guide-list').then(m => m.GuideListModule)

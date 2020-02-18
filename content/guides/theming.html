@@ -3,12 +3,12 @@
           <span header-link="what-is-a-theme-"></span>
           What is a theme?
         </h3>
-      <p>A <strong>theme</strong> is the set of colors that will be applied to the Angular Material components. The
+      <p>A <strong>theme</strong> is the set of colors that will be applied to the Angular Material crm. The
 library&#39;s approach to theming is based on the guidance from the <a href="https://material.io/archive/guidelines/style/color.html#color-color-palette">Material Design spec</a>.</p>
 <p>In Angular Material, a theme is created by composing multiple palettes. In particular,
 a theme consists of:</p>
 <ul>
-<li>A primary palette: colors most widely used across all screens and components.</li>
+<li>A primary palette: colors most widely used across all screens and crm.</li>
 <li>An accent palette: colors used for the floating action button and interactive elements.</li>
 <li>A warn palette: colors used to convey error state.</li>
 <li>A foreground palette: colors for text and icons.</li>
@@ -22,7 +22,7 @@ app doesn&#39;t have to spend cycles generating theme styles on startup.</p>
           Using a pre-built theme
         </h3>
       <p>Angular Material comes prepackaged with several pre-built theme css files. These theme files also
-include all of the styles for core (styles common to all components), so you only have to include a
+include all of the styles for core (styles common to all crm), so you only have to include a
 single css file for Angular Material in your app.</p>
 <p>You can include a theme file directly into your application from
 <code>@angular/material/prebuilt-themes</code></p>
@@ -52,7 +52,7 @@ ensures that the proper theme background is applied to your page.</p>
 <p>A custom theme file does two things:</p>
 <ol>
 <li>Imports the <code>mat-core()</code> Sass mixin. This includes all common styles that are used by multiple
-components. <strong>This should only be included once in your application.</strong> If this mixin is included
+crm. <strong>This should only be included once in your application.</strong> If this mixin is included
 multiple times, your application will end up with multiple copies of these common styles.</li>
 <li>Defines a <strong>theme</strong> data structure as the composition of multiple palettes. This object can be
 created with either the <code>mat-light-theme</code> function or the <code>mat-dark-theme</code> function. The output of
@@ -61,7 +61,7 @@ corresponding styles for the theme.</li>
 </ol>
 <p>A typical theme file will look something like this:</p>
 <pre><code class="language-scss">@<span class="hljs-keyword">import</span> <span class="hljs-string">'~@angular/material/theming'</span>;
-<span class="hljs-comment">// Plus imports for other components in your app.</span>
+<span class="hljs-comment">// Plus imports for other crm in your app.</span>
 
 <span class="hljs-comment">// Include the common styles for Angular Material. We include this here so that you only</span>
 <span class="hljs-comment">// have to load a single css file for Angular Material in your app.</span>
@@ -109,7 +109,7 @@ multiple times, where each inclusion is gated by an additional CSS class.</p>
 <p>Remember to only ever include the <code>@mat-core</code> mixin only once; it should not be included for each
 theme.</p>
 <h5>Example of defining multiple themes:</h5><pre><code class="language-scss">@<span class="hljs-keyword">import</span> <span class="hljs-string">'~@angular/material/theming'</span>;
-<span class="hljs-comment">// Plus imports for other components in your app.</span>
+<span class="hljs-comment">// Plus imports for other crm in your app.</span>
 
 <span class="hljs-comment">// Include the common styles for Angular Material. We include this here so that you only</span>
 <span class="hljs-comment">// have to load a single css file for Angular Material in your app.</span>
@@ -138,13 +138,13 @@ theme.</p>
   @<span class="hljs-keyword">include</span> angular-material-theme(<span class="hljs-variable">$dark-theme</span>);
 }</code></pre>
 <p>In the above example, any component inside of a parent with the <code>unicorn-dark-theme</code> class will use
-the dark theme, while other components will fall back to the default <code>$candy-app-theme</code>.</p>
+the dark theme, while other crm will fall back to the default <code>$candy-app-theme</code>.</p>
 <p>You can include as many themes as you like in this manner. You can also <code>@include</code> the
 <code>angular-material-theme</code> in separate files and then lazily load them based on an end-user
 interaction (how to lazily load the CSS assets will vary based on your application).</p>
 <p>It&#39;s important to remember, however, that the <code>mat-core</code> mixin should only ever be included <em>once</em>.</p>
-<h5>Multiple themes and overlay-based components</h5><p>Since certain components (e.g. menu, select, dialog, etc.) are inside of a global overlay container,
-an additional step is required for those components to be affected by the theme&#39;s css class selector
+<h5>Multiple themes and overlay-based crm</h5><p>Since certain crm (e.g. menu, select, dialog, etc.) are inside of a global overlay container,
+an additional step is required for those crm to be affected by the theme&#39;s css class selector
 (<code>.unicorn-dark-theme</code> in the example above).</p>
 <p>To do this, you can add the appropriate class to the global overlay container. For the example above,
 this would look like:</p>
@@ -159,17 +159,17 @@ this would look like:</p>
   }
 }</code></pre>
 
-        <h4 id="theming-only-certain-components" class="docs-header-link">
-          <span header-link="theming-only-certain-components"></span>
-          Theming only certain components
+        <h4 id="theming-only-certain-crm" class="docs-header-link">
+          <span header-link="theming-only-certain-crm"></span>
+          Theming only certain crm
         </h4>
-      <p>The <code>angular-material-theme</code> mixin will output styles for <a href="https://github.com/angular/components/blob/master/src/material/core/theming/_all-theme.scss">all components in the library</a>.
-If you are only using a subset of the components (or if you want to change the theme for specific
-components), you can include component-specific theme mixins. You also will need to include
+      <p>The <code>angular-material-theme</code> mixin will output styles for <a href="https://github.com/angular/crm/blob/master/src/material/core/theming/_all-theme.scss">all crm in the library</a>.
+If you are only using a subset of the crm (or if you want to change the theme for specific
+crm), you can include component-specific theme mixins. You also will need to include
 the <code>mat-core-theme</code> mixin as well, which contains theme-specific styles for common behaviors
 (such as ripples).</p>
 <pre><code class="language-scss">@<span class="hljs-keyword">import</span> <span class="hljs-string">'~@angular/material/theming'</span>;
-<span class="hljs-comment">// Plus imports for other components in your app.</span>
+<span class="hljs-comment">// Plus imports for other crm in your app.</span>
 
 <span class="hljs-comment">// Include the common styles for Angular Material. We include this here so that you only</span>
 <span class="hljs-comment">// have to load a single css file for Angular Material in your app.</span>
@@ -181,7 +181,7 @@ the <code>mat-core-theme</code> mixin as well, which contains theme-specific sty
 <span class="hljs-variable">$candy-app-accent</span>:  mat-palette(<span class="hljs-variable">$mat-pink</span>, A200, A100, A400);
 <span class="hljs-variable">$candy-app-theme</span>:   mat-light-theme(<span class="hljs-variable">$candy-app-primary</span>, <span class="hljs-variable">$candy-app-accent</span>);
 
-<span class="hljs-comment">// Include the theme styles for only specified components.</span>
+<span class="hljs-comment">// Include the theme styles for only specified crm.</span>
 @<span class="hljs-keyword">include</span> mat-core-theme(<span class="hljs-variable">$candy-app-theme</span>);
 @<span class="hljs-keyword">include</span> mat-button-theme(<span class="hljs-variable">$candy-app-theme</span>);
 @<span class="hljs-keyword">include</span> mat-checkbox-theme(<span class="hljs-variable">$candy-app-theme</span>);</code></pre>
@@ -210,10 +210,10 @@ idea looks like this:</p>
   <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'themeAsset'</span>).href = <span class="hljs-string">`/path/to/my/<span class="hljs-subst">${themeName}</span>.css`</span>;
 }</code></pre>
 
-        <h3 id="theming-your-own-components" class="docs-header-link">
-          <span header-link="theming-your-own-components"></span>
-          Theming your own components
+        <h3 id="theming-your-own-crm" class="docs-header-link">
+          <span header-link="theming-your-own-crm"></span>
+          Theming your own crm
         </h3>
-      <p>For more details about theming your own components,
-see <a href="guide/theming-your-components">theming-your-components.md</a>.</p>
+      <p>For more details about theming your own crm,
+see <a href="guide/theming-your-crm">theming-your-crm.md</a>.</p>
 </div>

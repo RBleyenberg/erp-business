@@ -9,7 +9,7 @@
   templateUrl: <span class="hljs-string">"./custom-stepper.component.html"</span>,
   styleUrls: [<span class="hljs-string">"./custom-stepper.component.css"</span>],
   <span class="hljs-comment">// This custom stepper provides itself as CdkStepper so that it can be recognized</span>
-  <span class="hljs-comment">// by other components.</span>
+  <span class="hljs-comment">// by other crm.</span>
   providers: [{ provide: CdkStepper, useExisting: CustomStepperComponent }]
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CustomStepperComponent <span class="hljs-keyword">extends</span> CdkStepper {

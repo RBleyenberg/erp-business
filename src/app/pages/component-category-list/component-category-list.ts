@@ -2,10 +2,10 @@ import {Component, NgModule, OnDestroy, OnInit} from '@angular/core';
 import {MatCardModule} from '@angular/material/card';
 import {CommonModule} from '@angular/common';
 import {ActivatedRoute, Params, RouterModule} from '@angular/router';
-import {DocumentationItems, SECTIONS} from '../../shared/documentation-items/documentation-items';
 import {ComponentPageTitle} from '../page-title/page-title';
 import {SvgViewerModule} from '../../shared/svg-viewer/svg-viewer';
 import {Observable, combineLatest, Subscription} from 'rxjs';
+import { DocumentationItems, SECTIONS } from 'menu/menu-items';
 
 
 @Component({
